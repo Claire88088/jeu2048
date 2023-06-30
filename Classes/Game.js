@@ -255,8 +255,7 @@ class Game {
     }
 
     isGameOver() {
-        // return (this.maxPawnValue == 2048) || (this.pawnsInGameNumber >= this.maxPawnsNumber)
-        return (this.maxPawnValue == 8) || (this.pawnsInGameNumber >= this.maxPawnsNumber)
+        return (this.maxPawnValue == 2048) || (this.pawnsInGameNumber >= this.maxPawnsNumber)
     }
 
     disableClicks() {

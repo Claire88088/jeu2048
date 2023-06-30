@@ -11,16 +11,16 @@ class Pawn {
         this.value = value
         this.isMerged = false // permet de gérer si le pion peut fusionner ou pas (une seule fusion possible par tour)
 
-        // affichage
-        this.pawnHtmlElement = this.createPawnHtmlElement()        
-        gridHtmlElement.appendChild(this.pawnHtmlElement)
-
         Pawn.backgroundColors[2] = 'orange'
         Pawn.backgroundColors[4] = 'blue'
         Pawn.backgroundColors[8] = 'green'
         Pawn.backgroundColors[16] = 'yellow'
         Pawn.backgroundColors[32] = 'pink'
         Pawn.backgroundColors[46] = 'red'
+
+        // affichage
+        this.pawnHtmlElement = this.createPawnHtmlElement()        
+        gridHtmlElement.appendChild(this.pawnHtmlElement)
     }
 
     /**

@@ -56,8 +56,6 @@ class Game {
 
     /********* gestion du jeu *****************************/
     startGame() {
-        // ajout des 2 pions de départ de valeur 2
-        // TODO : ajouter la valeur aléatoire 2 ou 4 pour l'ajout des autres pions
         this.addNewPawnWithRandomPositionAndValue2Or4()
         this.addNewPawnWithRandomPositionAndValue2Or4()
     }

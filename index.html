@@ -8,30 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-    <h1>Mon jeu 2048</h1>
-
-    <div class="game-board">
-
-        <button onclick="clickLeft()">gauche</button>
-    
-        <div class="grid-contener">
-            <button onclick="clickTop()">haut</button>
-
-            <div class="grid">
-            </div>
-
-            <button onclick="clickBottom()">bas</button>
-        </div>
+    <div class="page">
+        <h1>Mon jeu 2048</h1>
+        <div class="info"></div>
         
-        <button onclick="clickRight()">droite</button>
-
+        <div class="game-board">
+            <button onclick="clickLeft()">gauche</button>
+        
+            <div class="grid-contener">
+                <button onclick="clickTop()">haut</button>
+    
+                <div class="grid">
+                </div>
+    
+                <button onclick="clickBottom()">bas</button>
+            </div>
+            
+            <button onclick="clickRight()">droite</button>
+        </div>
     </div>
+    
    
     <script src="Game.js"></script>
     <script src="Position.js"></script>
     <script src="Pawn.js"></script>
     <script src="TestGame.js"></script>
+    <script src="Alerte.js"></script>
     <script src="script.js"></script>
 
 </body>

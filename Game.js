@@ -124,11 +124,7 @@ class Game {
     /*** left */
     clickLeft() {
         this.movePawnsToLeft()
-        if (this.isGameOver()) {
-            console.log('fin de la partie')
-        } else {
-            setTimeout(() => this.addNewPawnWithRandomPositionAndValue2Or4(), 300)
-        }
+        this.endGameOrContinue()
     }
 
     movePawnsToLeft() {
@@ -251,19 +247,26 @@ class Game {
         this.pawnsMerged = []
     }
 
-    isGameOver() {
-        return (this.maxPawnValue == 16) || (this.pawnsInGameNumber >= this.maxPawnsNumber)
+    endGameOrContinue() {
+        if (this.isGameOver()) {
+            const alerteHtmlElement = new Alerte('Fin de la partie', document.getElementsByClassName('info')[0])
+        } else {
+            setTimeout(() => this.addNewPawnWithRandomPositionAndValue2Or4(), 300)
+        }
     }
+
+    isGameOver() {
+        // return (this.maxPawnValue == 2048) || (this.pawnsInGameNumber >= this.maxPawnsNumber)
+        return (this.maxPawnValue == 8) || (this.pawnsInGameNumber >= this.maxPawnsNumber)
+    }
+
+
 
 
     /***** right */
     clickRight() {
         this.movePawnsToRight()
-        if (this.isGameOver()) {
-            console.log('fin de la partie')
-        } else {
-            setTimeout(() => this.addNewPawnWithRandomPositionAndValue2Or4(), 300)
-        }
+        this.endGameOrContinue()
     }
     
     movePawnsToRight() {
@@ -303,11 +306,7 @@ class Game {
     /*** top */
     clickTop() {
         this.movePawnsToTop()
-        if (this.isGameOver()) {
-            console.log('fin de la partie')
-        } else {
-            setTimeout(() => this.addNewPawnWithRandomPositionAndValue2Or4(), 300)
-        }
+        this.endGameOrContinue()
     }
 
     movePawnsToTop() {
@@ -358,11 +357,7 @@ class Game {
     /** bottom */
     clickBottom() {
         this.movePawnsToBottom()
-        if (this.isGameOver()) {
-            console.log('fin de la partie')
-        } else {
-            setTimeout(() => this.addNewPawnWithRandomPositionAndValue2Or4(), 300)
-        }
+        this.endGameOrContinue()
     }
 
     movePawnsToBottom() {

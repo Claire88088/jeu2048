@@ -8,8 +8,17 @@
     }
 }
 
+.page {
+    width: 80%;
+    margin: 0 auto;
+}
+
 h1 {
     text-align: center;
+}
+
+.info {
+    margin: 20px 0px;
 }
 
 .game-board {
@@ -82,3 +91,7 @@ button:hover,
     transition: all .3s;
 }
 
+.alerte {
+    font-size: 2rem;
+    text-align: center;
+}

@@ -250,6 +250,7 @@ class Game {
     endGameOrContinue() {
         if (this.isGameOver()) {
             const alerteHtmlElement = new Alerte('Fin de la partie', document.getElementsByClassName('info')[0])
+            this.disableClicks()
         } else {
             setTimeout(() => this.addNewPawnWithRandomPositionAndValue2Or4(), 300)
         }
@@ -260,7 +261,12 @@ class Game {
         return (this.maxPawnValue == 8) || (this.pawnsInGameNumber >= this.maxPawnsNumber)
     }
 
-
+    disableClicks() {
+        const clickBtns = document.getElementsByClassName('clickBtn')
+        for (let btn of clickBtns) {
+            btn.setAttribute('disabled', 'disabled')
+        }
+    }
 
 
     /***** right */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu 2048</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <h1>Mon jeu 2048</h1>
+
+    <div class="game-board">
+
+        <button onclick="clickLeft()">gauche</button>
+    
+        <div class="grid-contener">
+            <button onclick="clickTop()">haut</button>
+
+            <div class="grid">
+            </div>
+
+            <button onclick="clickBottom()">bas</button>
+        </div>
+        
+        <button onclick="clickRight()">droite</button>
+
+    </div>
+   
+    <script src="Game.js"></script>
+    <script src="Position.js"></script>
+    <script src="Pawn.js"></script>
+    <script src="TestGame.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
